@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-        
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Vriodel</title>
     <meta name="author" content="Casey V">
-    <meta name="description" content="WtV is a work-in-progress fantasy story that deals with disasters, loss, changes, and grief.">
+    <meta name="description"
+        content="WtV is a work-in-progress fantasy story that deals with disasters, loss, changes, and grief.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            background: url(images/background1.png);
+            background: url(images/background2.png);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -23,27 +24,33 @@
 <body>
 
     <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="top-logo"><img src="images/placeholdicon.png" alt="placeholder icon"
+                class="top-icon"></a>
         <a href="index.html" class="active">home</a>
         <a href="pageone.html">page1</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
-          </a>
+        </a>
     </nav>
 
     <main class="container">
 
         <h1>title</h1>
         <p>text text text text</p>
-        
+
         <section class="image-text-list">
             <div class="it-listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
-            <div class="it-listing"><h2>sub title</h2>
-                <p>text text text</p></div>
+            <div class="it-listing">
+                <h2>sub title</h2>
+                <p>text text text</p>
+            </div>
         </section>
 
         <section class="image-text-list">
-            <div class="it-listing"><h2>sub title</h2>
-                <p>text text text</p></div>
+            <div class="it-listing">
+                <h2>sub title</h2>
+                <p>text text text</p>
+            </div>
             <div class="it-listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
         </section>
 
@@ -55,25 +62,25 @@
 
     <script>
         function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
 
-window.onscroll = function() {myFunction()};
-var navbar = document.getElementById("myTopnav");
-var sticky = navbar.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 
 </body>
 

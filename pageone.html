@@ -2,18 +2,113 @@
 <html lang="en">
 
 <head>
-        
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your page title goes here</title>
-    <meta name="author" content="personalize with your name">
-    <meta name="description" content="describe your page here">
+    <title>WtV - Characters</title>
+    <meta name="author" content="Casey V">
+    <meta name="description"
+        content="The characters of WtV">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: url(images/background3.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- CONTENT GOES HERE -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="top-logo"><img src="images/placeholdicon.png" alt="placeholder icon"
+                class="top-icon"></a>
+        <a href="index.html">home</a>
+        <a href="pageone.html" class="active">page1</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <main class="container">
+
+        <h1>title</h1>
+        <p>text text text text</p>
+
+        <button class="accordion">name</button>
+        <div class="panel">
+            <section class="image-text-list">
+             <div class="it-listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="it-listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+             </div>
+        </section>
+        </div>
+
+        <button class="accordion">name</button>
+        <div class="panel">
+             <section class="image-text-list">
+                <div class="it-listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+             </div>
+                <div class="it-listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+        </div>
+
+        <footer>
+            <p>text text text</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
 
 </body>
 
