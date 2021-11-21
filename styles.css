@@ -1,1 +1,24 @@
+.container {
+    background-color: #EEEBDD;
+    max-width: 960px;
+    padding: 15px;
+    margin: 1em auto;
+}
 
+.image-text-list {
+    display: flex;
+}
+
+.it-listing {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+    padding: 1em auto;
+    margin: 1em auto;
+    outline: 4px solid #6A2F11;
+}
