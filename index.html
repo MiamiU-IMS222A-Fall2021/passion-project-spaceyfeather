@@ -10,7 +10,6 @@
     <meta name="description"
         content="WtV is a work-in-progress fantasy story that deals with disasters, loss, changes, and grief.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             background: url(images/background2.png);
@@ -24,13 +23,17 @@
 <body>
 
     <nav class="topnav" id="myTopnav">
-        <a href="index.html" class="top-logo"><img src="images/placeholdicon.png" alt="placeholder icon"
+        <a href="index.html" class="top-logo" style="float:left"><img src="images/placeholdicon.png" alt="placeholder icon"
                 class="top-icon"></a>
-        <a href="index.html" class="active">home</a>
-        <a href="pageone.html">page1</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+        <a href="index.html"><img src="images/placeholdicon.png" alt="placeholder icon" class="top-icon"><div class="navText">home</div></a>
+        <a href="pageone.html"><img src="images/placeholdicon.png" alt="placeholder icon" class="top-icon"><div class="navText">page1</div></a>
+        <div class="menuIcon" onclick="animateFunction(this)">
+            <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            </a>
     </nav>
 
     <main class="container">
@@ -61,7 +64,7 @@
     </main>
 
     <script>
-        function myFunction() {
+        function topNavFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
                 x.className += " responsive";
@@ -70,15 +73,8 @@
             }
         }
 
-        window.onscroll = function () { myFunction() };
-        var navbar = document.getElementById("myTopnav");
-        var sticky = navbar.offsetTop;
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
+        function animateFunction(x) {
+            x.classList.toggle("change");
         }
     </script>
 
