@@ -45,25 +45,59 @@
         <h1>title</h1>
         <p>text text text text</p>
 
+        <p>testing carousel goodbye world</p>
+
+        <div class="image-container">
+            <div class="image-slide">
+                <img src="images/placeholdimage.png" alt="placeholder image">
+                <div class="image-caption">slide 1</div>
+            </div>
+            <div class="image-slide">
+                <img src="images/placeholdimage.png" alt="placeholder image">
+                <div class="image-caption">slide 2</div>
+            </div>
+            <div class="image-slide">
+                <img src="images/placeholdimage.png" alt="placeholder image">
+                <div class="image-caption">slide 3</div>
+            </div>
+            <div class="image-slide">
+                <img src="images/placeholdimage.png" alt="placeholder image">
+                <div class="image-caption">slide 4</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!--- cannot have multiple carousels on the same page :( --->
+
         <button class="accordion">name</button>
         <div class="panel">
-            <section class="image-text-list">
-                <div class="it-listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
-                <div class="it-listing">
+            <section class="content-list">
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="listing">
                     <h2>sub title</h2>
                     <p>text text text</p>
                 </div>
             </section>
+            <p>text text text</p>
         </div>
 
         <button class="accordion">name</button>
         <div class="panel">
-            <section class="image-text-list">
-                <div class="it-listing">
+            <section class="content-list">
+                <div class="listing">
                     <h2>sub title</h2>
                     <p>text text text</p>
                 </div>
-                <div class="it-listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
             </section>
         </div>
 
@@ -109,6 +143,44 @@
         }
     </script>
 
-</body>
+    <script>
+        var currentSlide = 0;
+        const slides = document.querySelectorAll(".image-slide")
+        const dots = document.querySelectorAll('.dot')
 
-</html>
+        const init = (n) => {
+            slides.forEach((slide) => {
+                slide.style.display = "none"
+                dots.forEach((dot) => {
+                    dot.classList.remove("activeDot")
+                })
+            })
+            slides[n].style.display = "block"
+            dots[n].classList.add("activeDot")
+        }
+        document.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+        const next = () => {
+            currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+            init(currentSlide)
+        }
+
+        const prev = () => {
+            currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+            init(currentSlide)
+        }
+
+        document.querySelector(".next").addEventListener('click', next)
+        document.querySelector(".prev").addEventListener('click', prev)
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                init(index)
+                currentSlide = i
+            })
+        })
+    </script> 
+</body >
+
+</html >

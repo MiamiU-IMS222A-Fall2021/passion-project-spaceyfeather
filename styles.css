@@ -8,11 +8,11 @@
     color: #4B2F27;
 }
 
-.image-text-list {
+.content-list {
     display: flex;
 }
 
-.it-listing {
+.listing {
     flex: 1;
     margin: 10px;
     padding: 10px;
@@ -51,6 +51,7 @@ css below is mostly from tutorials, modified to fit this
     width: 100%;
     border-radius: 20px 20px;
     box-shadow: 0px 0px 20px #180C01;
+    z-index: 1; /* this keeps it above the slideshow */
   }
 
   .topnav a {
@@ -203,3 +204,77 @@ css below is mostly from tutorials, modified to fit this
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   } /* webkit exists for safari*/
+
+  /* multiple tutorials for an image gallery and all of them have things i do and don't like
+  so time to be risky and try to make my own from these */
+
+  .image-container {
+    position: relative;
+    align-content: center;
+    margin: 25px 1em 1px 1em;
+    padding: 1em auto;
+    display: flex;
+    max-height: 50%;
+    width: auto;
+  }
+
+.image-slide {
+    flex: 1;
+    display: none;
+  }
+
+.image-container img {
+    display: block; /* this lets it be centered */
+    max-height: 300px;
+    width: auto;
+    margin: auto;
+  }
+
+  .image-caption {
+    text-align: center;
+    padding: 1em 0px 0px 0px;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: #630000;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .prev {
+    left: 2px;
+  }
+
+  .next {
+    right: 2px;
+  }
+
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .dot {
+    flex: 1;
+    cursor: pointer;
+    margin: 10px;
+    max-width: 20px;
+    height: 20px;
+    color: #333;
+    border-radius: 50%;
+    background-color: #D4C5AD;
+  }
+
+  .activeDot {
+    border: 2px solid #4B2F27;
+  }
