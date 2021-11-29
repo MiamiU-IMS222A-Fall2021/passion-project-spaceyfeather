@@ -36,11 +36,12 @@ img {
 
 .top-icon {
     outline: none;
+    margin-left: 25px;
 }
 
 .top-logo img {
   outline: none;
-  width: 100px;
+  width: 190px;
   height: auto;
   margin: 5px auto;
 }
@@ -51,7 +52,7 @@ img {
   }
 
   .top-logo {
-    width: 75px;
+    width: 150px;
     height: auto;
   }
 
@@ -84,9 +85,15 @@ css below is mostly from tutorials, modified to fit this
     font-size: 17px;
     transition: all 0.2s ease-in-out;
   }
+  /*
+  the float and block display allows it to be the layout it is
+      which is unfortunately a bit uneven
+  */
 
   .navText {
     visibility: hidden;
+    font-family: 'Quattrocento', serif;
+    margin-left: 25px;
   }
 
  .top-icon:hover ~ .navText {
@@ -286,7 +293,7 @@ css below is mostly from tutorials, modified to fit this
   .dots-container {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 1em auto;
   }
 
   .dot {

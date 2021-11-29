@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WtV - Characters</title>
-    <meta name="author" content="Casey V">
-    <meta name="description" content="The characters of WtV">
+    <meta name="author" content="Casey Verbsky">
+    <meta name="description" content="The characters of WtV.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,13 +27,22 @@
 <body>
 
     <nav class="topnav" id="myTopnav">
-        <a href="index.html" class="top-logo" style="float:left"><img src="images/testvector.svg"
-                alt="a test vector icon"></a>
-        <a href="index.html"><img src="images/placeholdicon.png" alt="placeholder icon" class="top-icon">
-            <div class="navText">home</div>
+        <a href="index.html" class="top-logo" style="float:left"><img src="images/name_icon.svg"
+                alt="a logo reading vriodel"></a>
+        <a href="index.html"><img src="images/home_icon.svg" alt="a home icon" class="top-icon" width="56px">
+            <div class="navText">Home</div>
         </a>
-        <a href="pageone.html"><img src="images/placeholdicon.png" alt="placeholder icon" class="top-icon">
-            <div class="navText">page1</div>
+        <a href="characters.html"><img src="images/character_icon.svg" alt="a wolf icon" class="top-icon" width="64px">
+            <div class="navText">Characters</div>
+        </a>
+        <a href="world.html"><img src="images/world_icon.svg" alt="a compass icon" class="top-icon" width="55px">
+            <div class="navText">World</div>
+        </a>
+        <a href="music.html"><img src="images/music_icon.svg" alt="a music note icon" class="top-icon" width="45px">
+            <div class="navText">Music</div>
+        </a>
+        <a href="development.html"><img src="images/dev_icon.svg" alt="a pencil icon" class="top-icon" width="47px">
+            <div class="navText">Development</div>
         </a>
         <div class="menuIcon" onclick="animateFunction(this)">
             <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
@@ -46,7 +55,7 @@
 
     <main class="container">
 
-        <h1>title</h1>
+        <h1>Characters</h1>
         <p>text text text text</p>
 
         <p>testing carousel goodbye world</p>
@@ -110,11 +119,11 @@
                         <img src="images/placeholdimage.png" alt="placeholder image">
                         <div class="image-caption">slide 4</div>
                     </div>
-    
+
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-    
+
                 <div class="dots-container">
                     <span class="dot"></span>
                     <span class="dot"></span>
@@ -122,7 +131,7 @@
                     <span class="dot"></span>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
 
         <button class="accordion">name</button>
@@ -157,7 +166,7 @@
         }
     </script>
 
-<!--- accordion script --->
+    <!--- accordion script --->
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
@@ -180,90 +189,90 @@
         }
     </script>
 
-<!--- 1st carousel --->
+    <!--- 1st carousel --->
     <script>
-        with (id="carousel-one") {
-        var currentSlide = 0;
-        const container = document.querySelector("#carousel-one")
-        const slides = container.querySelectorAll(".image-slide")
-        const dots = container.querySelectorAll('.dot')
+        with (id = "carousel-one") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-one")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
 
-        const init = (n) => {
-            slides.forEach((slide) => {
-                slide.style.display = "none"
-                dots.forEach((dot) => {
-                    dot.classList.remove("activeDot")
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
                 })
             })
-            slides[n].style.display = "block"
-            dots[n].classList.add("activeDot")
         }
-        container.addEventListener("DOMContentLoaded", init(currentSlide))
-
-
-        const next = () => {
-            currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
-            init(currentSlide)
-        }
-
-        const prev = () => {
-            currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
-            init(currentSlide)
-        }
-
-        container.querySelector(".next").addEventListener('click', next)
-        container.querySelector(".prev").addEventListener('click', prev)
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", () => {
-                init(index)
-                currentSlide = i
-            })
-        })
-    }
     </script>
 
-<!--- second carousel --->
+    <!--- second carousel --->
     <script>
-        with (id="carousel-two") {
-        var currentSlide = 0;
-        const container = document.querySelector("#carousel-two")
-        const slides = container.querySelectorAll(".image-slide")
-        const dots = container.querySelectorAll('.dot')
+        with (id = "carousel-two") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-two")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
 
-        const init = (n) => {
-            slides.forEach((slide) => {
-                slide.style.display = "none"
-                dots.forEach((dot) => {
-                    dot.classList.remove("activeDot")
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
                 })
             })
-            slides[n].style.display = "block"
-            dots[n].classList.add("activeDot")
         }
-        container.addEventListener("DOMContentLoaded", init(currentSlide))
-
-
-        const next = () => {
-            currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
-            init(currentSlide)
-        }
-
-        const prev = () => {
-            currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
-            init(currentSlide)
-        }
-
-        container.querySelector(".next").addEventListener('click', next)
-        container.querySelector(".prev").addEventListener('click', prev)
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", () => {
-                init(index)
-                currentSlide = i
-            })
-        })
-    }
     </script>
 </body>
 
