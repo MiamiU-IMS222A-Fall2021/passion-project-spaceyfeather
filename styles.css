@@ -30,6 +30,12 @@ img {
     outline: none;
 }
 
+.top-logo img {
+  outline: none;
+  width: 100px;
+  height: auto;
+}
+
 @media screen and (max-width:600px) {
   .content-list {
     display: block;
