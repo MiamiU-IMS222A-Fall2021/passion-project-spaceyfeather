@@ -31,7 +31,7 @@ img {
 }
 
 @media screen and (max-width:600px) {
-  .image-text-list {
+  .content-list {
     display: block;
   }
 
@@ -225,7 +225,7 @@ css below is mostly from tutorials, modified to fit this
 
 .image-container img {
     display: block; /* this lets it be centered */
-    max-height: 300px;
+    max-height: 400px;
     width: auto;
     margin: auto;
   }
@@ -244,7 +244,7 @@ css below is mostly from tutorials, modified to fit this
     padding: 16px;
     color: #630000;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 20pt;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
