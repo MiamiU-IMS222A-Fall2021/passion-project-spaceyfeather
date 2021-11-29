@@ -8,6 +8,14 @@
     color: #4B2F27;
 }
 
+p {
+  font-family: 'Baskervville', serif;
+}
+
+h1, h2 {
+  font-family: 'Merienda', cursive;
+}
+
 .content-list {
     display: flex;
 }
@@ -155,6 +163,9 @@ css below is mostly from tutorials, modified to fit this
     border-radius: 20px 20px;
     padding: 1em auto;
     margin: 1em auto;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    font-size: 16pt;
   }
 
   /* transition closing doesn't work, same with nav */
@@ -223,7 +234,7 @@ css below is mostly from tutorials, modified to fit this
   .image-container {
     position: relative;
     align-content: center;
-    margin: 25px 1em 1px 1em;
+    margin: 25px 1em 1em 1em;
     padding: 1em auto;
     display: flex;
     max-height: 50%;
@@ -245,6 +256,8 @@ css below is mostly from tutorials, modified to fit this
   .image-caption {
     text-align: center;
     padding: 1em 0px 0px 0px;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
   }
 
   .prev,

@@ -9,7 +9,11 @@
     <meta name="author" content="Casey V">
     <meta name="description" content="The characters of WtV">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Merienda:wght@400;700&family=Quattrocento:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             background: url(images/background3.png);
@@ -23,8 +27,8 @@
 <body>
 
     <nav class="topnav" id="myTopnav">
-        <a href="index.html" class="top-logo" style="float:left"><img src="images/placeholdicon.png"
-                alt="placeholder icon" class="top-icon"></a>
+        <a href="index.html" class="top-logo" style="float:left"><img src="images/testvector.svg"
+                alt="a test vector icon"></a>
         <a href="index.html"><img src="images/placeholdicon.png" alt="placeholder icon" class="top-icon">
             <div class="navText">home</div>
         </a>
@@ -47,33 +51,35 @@
 
         <p>testing carousel goodbye world</p>
 
-        <div class="image-container">
-            <div class="image-slide">
-                <img src="images/placeholdimage.png" alt="placeholder image">
-                <div class="image-caption">slide 1</div>
-            </div>
-            <div class="image-slide">
-                <img src="images/placeholdimage.png" alt="placeholder image">
-                <div class="image-caption">slide 2</div>
-            </div>
-            <div class="image-slide">
-                <img src="images/placeholdimage.png" alt="placeholder image">
-                <div class="image-caption">slide 3</div>
-            </div>
-            <div class="image-slide">
-                <img src="images/placeholdimage.png" alt="placeholder image">
-                <div class="image-caption">slide 4</div>
+        <div id="carousel-one">
+            <div class="image-container">
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 1</div>
+                </div>
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 2</div>
+                </div>
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 3</div>
+                </div>
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 4</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        
-        <div class="dots-container">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
 
         <!--- cannot have multiple carousels on the same page :( --->
@@ -88,6 +94,37 @@
                 </div>
             </section>
             <p>text text text</p>
+            <div id="carousel-two">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 1</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 2</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 3</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 4</div>
+                    </div>
+    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+    
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            </div>
         </div>
 
         <button class="accordion">name</button>
@@ -144,9 +181,11 @@
     </script>
 
     <script>
+        with (id="carousel-one") {
         var currentSlide = 0;
-        const slides = document.querySelectorAll(".image-slide")
-        const dots = document.querySelectorAll('.dot')
+        const container = document.querySelector("#carousel-one")
+        const slides = container.querySelectorAll(".image-slide")
+        const dots = container.querySelectorAll('.dot')
 
         const init = (n) => {
             slides.forEach((slide) => {
@@ -158,7 +197,7 @@
             slides[n].style.display = "block"
             dots[n].classList.add("activeDot")
         }
-        document.addEventListener("DOMContentLoaded", init(currentSlide))
+        container.addEventListener("DOMContentLoaded", init(currentSlide))
 
 
         const next = () => {
@@ -171,8 +210,8 @@
             init(currentSlide)
         }
 
-        document.querySelector(".next").addEventListener('click', next)
-        document.querySelector(".prev").addEventListener('click', prev)
+        container.querySelector(".next").addEventListener('click', next)
+        container.querySelector(".prev").addEventListener('click', prev)
 
         dots.forEach((dot, index) => {
             dot.addEventListener("click", () => {
@@ -180,7 +219,50 @@
                 currentSlide = i
             })
         })
-    </script> 
-</body >
+    }
+    </script>
 
-</html >
+    <script>
+        with (id="carousel-two") {
+        var currentSlide = 0;
+        const container = document.querySelector("#carousel-two")
+        const slides = container.querySelectorAll(".image-slide")
+        const dots = container.querySelectorAll('.dot')
+
+        const init = (n) => {
+            slides.forEach((slide) => {
+                slide.style.display = "none"
+                dots.forEach((dot) => {
+                    dot.classList.remove("activeDot")
+                })
+            })
+            slides[n].style.display = "block"
+            dots[n].classList.add("activeDot")
+        }
+        container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+        const next = () => {
+            currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+            init(currentSlide)
+        }
+
+        const prev = () => {
+            currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+            init(currentSlide)
+        }
+
+        container.querySelector(".next").addEventListener('click', next)
+        container.querySelector(".prev").addEventListener('click', prev)
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                init(index)
+                currentSlide = i
+            })
+        })
+    }
+    </script>
+</body>
+
+</html>
