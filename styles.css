@@ -34,11 +34,17 @@ img {
   outline: none;
   width: 100px;
   height: auto;
+  margin: 5px auto;
 }
 
 @media screen and (max-width:600px) {
   .content-list {
     display: block;
+  }
+
+  .top-logo {
+    width: 75px;
+    height: auto;
   }
 
 }
