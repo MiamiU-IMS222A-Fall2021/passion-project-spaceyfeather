@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <meta name="author" content="author">
+    <meta name="description" content="description">
+
+</head>
+
+<body>
+    <container>
+
+        <!--- carousel --->
+        <div id="carousel-one">
+            <div class="image-container">
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 1</div>
+                </div>
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 2</div>
+                </div>
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 3</div>
+                </div>
+                <div class="image-slide">
+                    <img src="images/placeholdimage.png" alt="placeholder image">
+                    <div class="image-caption">slide 4</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <!--- accordion --->
+        <button class="accordion">name</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+        </div>
+
+    </container>
+
+    <!--- accordion script --->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <!--- 1st carousel --->
+    <script>
+        with (id = "carousel-one") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-one")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+</body>
+
+</html>

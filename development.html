@@ -55,9 +55,76 @@
 
     <main class="container">
         <h1>Development</h1>
-        <p>text text text</p>
+        <p>You'll see that I rarely think things through. After all, the project is only titled <em>Welcome to
+                Vriodel</em> because I haven't yet come up with a better name. The realm name alone feels empty, so
+            we're stuck with an accidental homage to <em>Welcome to Night Vale</em> instead.
+            <br>
+            <br>This page is primarily slideshows of art/design progression over time.
+        </p>
 
+        <section class="content-list">
+            <div class="listing"><img src="images/etc/wtv_p1.png"
+                    alt="two figures walking on a barren road. a hooded person is being followed by a wolf."></div>
+            <div class="listing"><img src="images/etc/wtv_p2.png" alt="the silhouette of a wolf sitting in a field.">
+            </div>
+            <div class="listing"><img src="images/etc/wtv_p3.png"
+                    alt="a person and a wolf, looking up at two mountain peaks connected by a stone bridge."></div>
+        </section>
 
+        <button class="accordion">Adaeth</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <p>Ada, unlike most of my known characters, did not start as a fan character, but like most, her
+                        design was spontaneous. Her first reference was made as one of the first pieces on my macbook,
+                        to test out using Medibang on a laptop that did not crash after five minutes. It was a bit odd
+                        and complicated (though admittedly it's moreso now). Most of my early art of her is just a
+                        nearly plain-grey wolf used for vent art, and it wasn't until later that she actually got some
+                        color and importance.
+                        <br>I can't remember where the name Ada comes from (though she does admittedly
+                        look like Ada from Petz Catz 2 for the Wii), but Traube was chosen as it's german for grape. Why
+                        is this important, why should anyone care? Well, the only fun fact about my family history that
+                        I can ever remember is that our ancestors smuggled grapes into America by sewing the vines into
+                        their jackets. We have descendants of those vines in our back yard.
+                        <br>Her design has never been consistent, and might not ever be. Her stripes and patterns change
+                        constantly, and half the time the reason she has three stripes on her face in one sketch and
+                        four in the next is because I ran out of space.
+                    </p>
+                </div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+
+            <div id="carousel-one">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 1</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 2</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 3</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/placeholdimage.png" alt="placeholder image">
+                        <div class="image-caption">slide 4</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <p>text text text</p>
@@ -77,6 +144,115 @@
 
         function animateFunction(x) {
             x.classList.toggle("change");
+        }
+    </script>
+
+    <!--- accordion script --->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <!--- 1st carousel --->
+    <script>
+        with (id = "carousel-one") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-one")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+    <!--- second carousel --->
+    <script>
+        with (id = "carousel-two") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-two")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
         }
     </script>
 
