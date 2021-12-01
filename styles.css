@@ -68,6 +68,11 @@ img {
 css below is mostly from tutorials, modified to fit this
 */
 
+audio::-webkit-media-controls-panel {
+  background-color: #D4C5AD;
+}
+
+
 .topnav {
     background-color: #180C01;
     overflow: hidden;
