@@ -12,6 +12,14 @@ p {
   font-family: 'Baskervville', serif;
 }
 
+footer {
+  font-style: italic;
+}
+
+a {
+  color: #6A2F11;
+}
+
 h1, h2 {
   font-family: 'Merienda', cursive;
 }
