@@ -63,6 +63,10 @@ img {
 
 }
 
+iframe {
+  padding: 1em auto;
+  border-radius: 10px 10px;
+}
 
 /*
 css below is mostly from tutorials, modified to fit this
