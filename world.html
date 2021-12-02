@@ -21,6 +21,7 @@
             background-attachment: fixed;
             background-size: cover;
         }
+
         @media screen and (max-width:600px) {
             body {
                 background: #345120;
@@ -62,9 +63,75 @@
         <h1>The Realm</h1>
         <p>text text text</p>
 
+        <img src="images/etc/wtv_inkarnatemap.jpg"
+            alt="a map of a fantasy world, primarily made of forests. the west, at the top of the map, has an ocean with a dragon-shaped island named Farrich. to the south is a barren moor named Waleryn. to the north is a dense pine forest on a cliff named Locke. it houses a facility. in the center of the map is a mountain range, with the centermost peaks labeled as the dawn and dusk peaks. a village named Raines sits between it and a forest named Evairn to the southwest. further east is a ruined castle named Laybourn. north from there is a barren forest named ni'rr, surrounded by a thick circle of pine trees. finally, north of that lies a larger village named Tarri.">
+
+        <button class="accordion">Locations</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+            <section class="content-list">
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+            <section class="content-list">
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+            <section class="content-list">
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+            </section>
+        </div>
+
+        <button class="accordion">Velz & Guardians</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+            </section>
+            <section class="content-list">
+                <div class="listing"><img src="images/placeholdimage.png" alt="placeholder image"></div>
+                <div class="listing">
+                    <h2>sub title</h2>
+                    <p>text text text</p>
+                </div>
+            </section>
+        </div>
 
         <footer>
-            <p>text text text</p>
+            <p>The main map was made entirely with <a href="https://inkarnate.com/">Inkarnate.</a></p>
         </footer>
 
     </main>
@@ -81,6 +148,29 @@
 
         function animateFunction(x) {
             x.classList.toggle("change");
+        }
+    </script>
+
+    <!--- accordion script --->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
         }
     </script>
 

@@ -20,7 +20,7 @@ a {
   color: #6A2F11;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Merienda', cursive;
 }
 
@@ -310,6 +310,12 @@ audio::-webkit-media-controls-panel {
 
   .next {
     right: 2px;
+  }
+
+  @media screen and (max-width:600px) {
+    .prev, .next {
+      visibility: hidden;
+    }
   }
 
   .dots-container {
