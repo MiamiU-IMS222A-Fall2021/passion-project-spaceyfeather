@@ -59,6 +59,31 @@ img {
   margin: 5px auto;
 }
 
+.profile {
+  text-align: center;
+  outline: 2px dashed #BFA08D;
+  border-radius: 20px 20px;
+  margin-left: 6em;
+  margin-right: 6em;
+  padding: 1em;
+}
+
+.profile img {
+  outline: none;
+  width: 45px;
+  height: auto;
+}
+
+.profile .ditto {
+  width: 200px;
+  height: auto;
+}
+
+.profile h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 @media screen and (max-width:600px) {
   .content-list {
     display: block;
