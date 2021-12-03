@@ -94,6 +94,10 @@ img {
     height: auto;
   }
 
+  .profile {
+    margin: 1em auto;
+  }
+
 }
 
 iframe {
