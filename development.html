@@ -315,6 +315,54 @@
 
         <button class="accordion">Extra</button>
         <div class="panel">
+            <p>Some other images that I wanted to include in some way.</p>
+
+            <div id="carousel-three">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_run2.JPG" alt="a small comic. a wolf wakes up a small cat, spotting a fire in the distance, explaining that they need to run." title="ada took in this child and still calls him kid">
+                        <div class="image-caption">(1/2) An old comic page for the start of The Burning.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_run1.JPG" alt="a small comic. a wolf and a cat are running away and pass through a barrier. behind them are crow-shaped mountains looking up at the silhouette of a dragon." title="i named these files wrong, this is named 1 when it is 2">
+                        <div class="image-caption">(2/2) Featuring a very on-the-nose design for the Dawn and Dusk peaks.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_zix.png" alt="a mountainside overlooking the setting sun in the ocean. tucked in the corner is a pile of books with a small dragon laying on top" title="zix is just a glorified bookmark /j">
+                        <div class="image-caption">Part of an old concept where a drifter with a tiny dragon stays with Ada and writes about the realm.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/guardians/velz/velz_journal.png" alt="a faded journal entry describing a dragon. it is drawn next to it, with a stick figure for scale" title="get a load of that writing">
+                        <div class="image-caption">Said author's first page on Velz.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_fi.png" alt="a shot of someone's torso, holding their hands to their chest. blood slips between their fingers and floats upwards. they are crying" title="We're All Connected">
+                        <div class="image-caption">Part of a concept where Ada's magic leaked out into the real world.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/danny_boy.png" alt="a man in a grey sweatshirt and ripped jeans. a brown canine with orange eyes winds around him, snarling. its legs are bandaged." title="collector of tiny spoons">
+                        <div class="image-caption">One of those people from said concept.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_site_logo.jpg" alt="a collection of logos following the motif of a wolf and the letter V" title="i actually wanted to include the words 'welcome to' but adobe illustrator hates me">
+                        <div class="image-caption">Very meta of me to include this site's own logo work.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/orb_ada.png" alt="a wolf that has been reduced to nothing but a rounded shape. she is unhappy about it." title="orb">
+                        <div class="image-caption">Orb.</div>
+                    </div>
+    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+    
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
 
         </div>
 
@@ -410,6 +458,49 @@
         with (id = "carousel-two") {
             var currentSlide = 0;
             const container = document.querySelector("#carousel-two")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+    <!--- third carousel --->
+    <script>
+        with (id = "carousel-three") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-three")
             const slides = container.querySelectorAll(".image-slide")
             const dots = container.querySelectorAll('.dot')
 
