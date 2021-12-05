@@ -12,6 +12,11 @@ p {
   font-family: 'Baskervville', serif;
 }
 
+.center-italic {
+  text-align: center;
+  font-style: italic;
+}
+
 footer {
   font-style: italic;
 }
@@ -53,6 +58,12 @@ img {
   width: auto;
 }
 /* the ones on the right want to be too far to the left but i am tired */
+
+#ada-sprite {
+  outline: none;
+  display: block;
+  align-self: center;
+}
 
 .top-icon {
     outline: none;
