@@ -47,6 +47,13 @@ img {
     outline: 4px solid #6A2F11;
 }
 
+#taller-image {
+  max-height: 400px;
+  max-width: auto;
+  width: auto;
+}
+/* the ones on the right want to be too far to the left but i am tired */
+
 .top-icon {
     outline: none;
     margin-left: 25px;
