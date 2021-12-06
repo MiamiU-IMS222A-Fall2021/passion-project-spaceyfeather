@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WtV - World</title>
+    <meta name="author" content="Casey Verbsky">
+    <meta name="description" content="The locations of Vriodel.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Merienda:wght@400;700&family=Quattrocento:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: url(images/background5.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        @media screen and (max-width:600px) {
+            body {
+                background: #345120;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="top-logo" style="float:left"><img src="images/name_icon.svg"
+                alt="a logo reading vriodel"></a>
+        <a href="index.html"><img src="images/home_icon.svg" alt="a home icon" class="top-icon" width="56px">
+            <div class="navText">Home</div>
+        </a>
+        <a href="characters.html"><img src="images/character_icon.svg" alt="a wolf icon" class="top-icon" width="64px">
+            <div class="navText">Characters</div>
+        </a>
+        <a href="world.html"><img src="images/world_icon.svg" alt="a compass icon" class="top-icon" width="55px">
+            <div class="navText">World</div>
+        </a>
+        <a href="music.html"><img src="images/music_icon.svg" alt="a music note icon" class="top-icon" width="45px">
+            <div class="navText">Music</div>
+        </a>
+        <a href="development.html"><img src="images/dev_icon.svg" alt="a pencil icon" class="top-icon" width="47px">
+            <div class="navText">Development</div>
+        </a>
+        <div class="menuIcon" onclick="animateFunction(this)">
+            <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </div>
+        </a>
+    </nav>
+
+    <main class="container">
+        <h1>The Realm</h1>
+        <p>Vriodel is a vast expanse of forests and mountains home primarily to woodland fauna and the occasional
+            mythical creature. It is often cloudy, obscuring the sun and keeping the level of light constant throughout
+            the day. The night sky is always full of life, and the stars shine clearly no matter how bright and full the
+            moon may be.</p>
+
+        <img src="images/etc/wtv_inkarnatemap.jpg"
+            alt="a map of a fantasy world, primarily made of forests. the west, at the top of the map, has an ocean with a dragon-shaped island named Farrich. to the south is a barren moor named Waleryn. to the north is a dense pine forest on a cliff named Locke. it houses a facility. in the center of the map is a mountain range, with the centermost peaks labeled as the dawn and dusk peaks. a village named Raines sits between it and a forest named Evairn to the southwest. further east is a ruined castle named Laybourn. north from there is a barren forest named ni'rr, surrounded by a thick circle of pine trees. finally, north of that lies a larger village named Tarri."
+            title="i thought about redoing this map but actually it's really good">
+
+        <button class="accordion">Locations</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Dawn and Dusk Peaks</h2>
+                    <p>Two towering mountains in the center of the realm, shaped almost like a pair of crows. A thin
+                        stone bridge connects them.
+                        The surrounding mountains have been reduced to rubble, but many creatures still call them home.
+                        Dusk Peak is riddled with small caves, and it is rumored that Adaeth resides in one of them.</p>
+                </div>
+                <div class="listing">
+                    <h2>Ruins of Laybourn</h2>
+                    <p>A once great castle made by the first human settlers in Vriodel. It was destroyed by Vykan after
+                        his mate Akantha was slain by the knights in a foolish test of power. </p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Raines</h2>
+                    <p>A village that was connected to Laybourn but became a home solely for the mythical inhabitants of
+                        Vriodel after the destruction of the castle. A harsh wind blows down from Dusk Peak , often
+                        putting the villagers at risk if they are caught outside in one of the snowstorms.</p>
+                </div>
+                <div class="listing">
+                    <h2>Evairn</h2>
+                    <p>A quiet forest that experiences a constant drizzle of rain. The flora provides shelter, making it
+                        a nice place to be if one can stand a damp pelt. A network of rivers runs through it and creates
+                        a great waterfall flowing into Nari below.</p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Nari/Mari</h2>
+                    <p>Also known as the Light Forest, it is relatively young and spread out. The trees capture
+                        sunlight, providing a soft yellow light throughout the night and darker days.</p>
+                </div>
+                <div class="listing">
+                    <h2>Locke</h2>
+                    <p>Thought to be the oldest forest, it is a grove of thick pines towering over the rest of the realm
+                        on a high cliff, and rather devoid of life.</p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Waleryn</h2>
+                    <p>A dry moor that appears to be trapped in an eternal sunset. A mountain stands in the middle,
+                        housing an intricate cave system with a lake deep underground. The moor is known to have an
+                        excess of magic that can drive one mad.
+                    </p>
+                </div>
+                <div class="listing">
+                    <h2>Farrich</h2>
+                    <p>A peculiar dragon-shaped island often shrouded in mist. No one is quite sure of what or who is
+                        housed there, as it's too long a fly and too dangerous a swim.</p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Palicie Facility</h2>
+                    <p>A facility created by humans who have snuck their way into the realm, nestled on one of the
+                        cliffs below Locke. There they test on whatever creatures they can find, hoping for some kind of
+                        breakthrough. Their goal is unknown.</p>
+                </div>
+                <div class="listing">
+                    <h2>Tarri</h2>
+                    <p>A cheerful town built primarily along one wide path. They live peacefully, and give thanks to the
+                        guardians, especially Delta and Mirrin, who visit every equinox.</p>
+                </div>
+            </section>
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Ni'rr</h2>
+                    <p>An incredibly complex and dangerous forest full of lost souls and vengeful spirits. The deeper
+                        into the mire one travels, the more it distorts, trapping them forever. </p>
+                </div>
+                <div class="listing">
+                    <h2>The Out-Where</h2>
+                    <p>An expanse of golden fields created by Adaeth in an attempt to isolate the realm. Where the
+                        forest becomes hazy and a line of stones lays in front of your path, turn back.</p>
+                </div>
+            </section>
+
+            <div id="carousel-one">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/characters/other/wtvc_ancienttech.png"
+                            alt="a mechanical canine staring at the camera, stuck against the root of a tree. another canine approaches in the background."
+                            title="Ancient Tech">
+                        <div class="image-caption">An odd newcomer to the Light Forest.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/spark_storm.png" alt="a tan canine racing between two cliffs"
+                            title="Desert Storm">
+                        <div class="image-caption">Spark, running through Waleryn.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_spring.png"
+                            alt="a loose depiction of a spring surrounded by fallen logs. a willow tree overlooks a small pond."
+                            title="ada's favorite place">
+                        <div class="image-caption">The Autumn Spring, hidden between the Dawn Peak range and Mari.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_nirr.png"
+                            alt="a tree overrun with blue-green moss, several soft white fireflies flying around."
+                            title="lost in the mire">
+                        <div class="image-caption">Deep Ni'rr.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_nirr_flora.png"
+                            alt="two different brances, one dark with silvery moss hanging off its thin, hand-like branches. the other is a blue-grey surrounded in mist that swirls into eye shapes."
+                            title="i do not remember the second one">
+                        <div class="image-caption">Ni'rr flora.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/wtv_spirr.jpg"
+                            alt="tall canines with no face or paws and long tails"
+                            title="get it spear because their legs are like spears">
+                        <div class="image-caption">Spi'rrs.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/wtv_kaede.png"
+                            alt="four birds, colored to look like the different seasons" title="japanese for maple">
+                        <div class="image-caption">The Kaede, a bird species whose plumage changes with the seasons.
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_place_emblems.jpg"
+                            alt="emblems for various locations: ni'rr is a fire with an eye, laybourn an angular dragon, raines a crowned crow, palicie a plant shaped like dna, tarri a cloud with stars, locke a plant, waleryn a ribbon and a moon, farrich a dragon head, and evairn a rose with a raindrop."
+                            title="draoul's redesign was made before these emblems. i decided not to change it.">
+                        <div class="image-caption">Emblems for various locations.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_grass.png" alt="a calm expanse of golden grass"
+                            title="the top layer is rendered differently and i may never understand why. it looks nice in 3d though">
+                        <div class="image-caption">The Out-Where, basically.</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="accordion">Velz & Guardians</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <h2>Velz</h2>
+                    <p>Great dragons thought to be the original inhabitants of Vriodel, formed by the ancient dragon
+                        Vren. All Velz are given a name that has at least one letter of Vren's, to honor them. Their two
+                        tails harbor immense destructive and healing capabilities, housed in the bone-like blades and
+                        large tufts of fur respectively.
+                        <br>Few exist today, leading to numerous theories. Some believe that they passed their energy
+                        into the realm, absorbed by the earth, while others claim they changed form to be commoners, and
+                        the most daring suggest that they were all slain.
+                    </p>
+                </div>
+                <div class="listing"><img src="images/guardians/velz/velz_vren.JPG"
+                        alt="a massive serpentine dragon with curled antler-like horns, skeletal wings, and two tails."
+                        title="an old design for Vren" id="taller-image"></div>
+            </section>
+            <section class="content-list">
+                <div class="listing"><img src="images/guardians/guard_random.png"
+                        alt="a striped creature with a long, fluffy tail and swirled markings."
+                        title="a random guardian"></div>
+                <div class="listing">
+                    <h2>Guardians</h2>
+                    <p>Powerful creatures tasked to watch over the realm with their lives, distinguished by the markings
+                        most share - namely the stripes leading from their eyes to the end of their face. These stripes
+                        can become jagged and disconnected if a guardian is stripped of their status and power.
+                        <br>Stronger guardians may have a Counter formed, a malicious spirit made to be their opposite.
+                        A Counter is out of a Guardian's control, no matter how many may blame the Guardian for letting
+                        it exist.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>The main map was made entirely with <a href="https://inkarnate.com/">Inkarnate.</a>
+                <br>Adoette and Trough, in "Ancient Tech," where designed by <a
+                    href="https://www.colorslive.com/artist/SpiralingUpward">SpiralingUpward</a> on colorslive.
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        function topNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function animateFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <!--- accordion script --->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <!--- 1st carousel --->
+    <script>
+        with (id = "carousel-one") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-one")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+</body>
+
+</html>

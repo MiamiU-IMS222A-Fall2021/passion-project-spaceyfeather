@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WtV - Development</title>
+    <meta name="author" content="Casey V">
+    <meta name="description" content="The development of WtV, mostly over character design changes.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Merienda:wght@400;700&family=Quattrocento:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: url(images/background1.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        @media screen and (max-width:600px) {
+            body {
+                background: #345120;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="top-logo" style="float:left"><img src="images/name_icon.svg"
+                alt="a logo reading vriodel"></a>
+        <a href="index.html"><img src="images/home_icon.svg" alt="a home icon" class="top-icon" width="56px">
+            <div class="navText">Home</div>
+        </a>
+        <a href="characters.html"><img src="images/character_icon.svg" alt="a wolf icon" class="top-icon" width="64px">
+            <div class="navText">Characters</div>
+        </a>
+        <a href="world.html"><img src="images/world_icon.svg" alt="a compass icon" class="top-icon" width="55px">
+            <div class="navText">World</div>
+        </a>
+        <a href="music.html"><img src="images/music_icon.svg" alt="a music note icon" class="top-icon" width="45px">
+            <div class="navText">Music</div>
+        </a>
+        <a href="development.html"><img src="images/dev_icon.svg" alt="a pencil icon" class="top-icon" width="47px">
+            <div class="navText">Development</div>
+        </a>
+        <div class="menuIcon" onclick="animateFunction(this)">
+            <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </div>
+        </a>
+    </nav>
+
+    <main class="container">
+        <h1>Development</h1>
+        <p>You'll see that I rarely think things through. After all, the project is only titled <em>Welcome to
+                Vriodel</em> because I haven't yet come up with a better name. The realm name alone feels empty, so
+            we're stuck with an accidental homage to <em>Welcome to Night Vale</em> instead.
+            <br>
+            <br>This page is primarily slideshows of art/design progression over time.
+        </p>
+
+        <section class="content-list">
+            <div class="listing"><img src="images/etc/wtv_p1.png"
+                    alt="two figures walking on a barren road. a hooded person is being followed by a wolf."
+                    title="The Road"></div>
+            <div class="listing"><img src="images/etc/wtv_p2.png" alt="the silhouette of a wolf sitting in a field."
+                    title="The Field">
+            </div>
+            <div class="listing"><img src="images/etc/wtv_p3.png"
+                    alt="a person and a wolf, looking up at two mountain peaks connected by a stone bridge."
+                    title="The Mountain"></div>
+        </section>
+        <p class="center-italic">Images from the first time I shared some of my writing for WtV, based on an old concept
+        </p>
+
+        <button class="accordion">Adaeth</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <p>Ada, unlike most of my known characters, did not start as a fan character, but like most, her
+                        design was spontaneous. Her first reference was made as one of the first pieces on my macbook,
+                        to test out using Medibang on a laptop that did not crash after five minutes. It was a bit odd
+                        and complicated (though admittedly it's moreso now). Most of my early art of her is just a
+                        nearly plain-grey wolf used for vent art, and it wasn't until later that she actually got some
+                        color and importance.
+                        <br>I can't remember where the name Ada comes from (though she does admittedly
+                        look like Ada from Petz Catz 2 for the Wii), but Traube was chosen as it's german for grape. Why
+                        is this important, why should anyone care? Well, the only fun fact about my family history that
+                        I can ever remember is that our ancestors smuggled grapes into America by sewing the vines into
+                        their jackets. We have descendants of those vines in our back yard.
+                        <br>Her design has never been consistent, and might not ever be. Her stripes and patterns change
+                        constantly, and half the time the reason she has three stripes on her face in one sketch and
+                        four in the next is because I ran out of space.
+                        <br>Ironically, while being the most integral part of WtV, Adaeth has been around a relatively
+                        short time.
+                    </p>
+                    <img src="images/adaeth/ada_sprite_trs.png" alt="a sprite of a dull red wolf"
+                        title="Vigenère cipher: keyword Observer" id="ada-sprite">
+                </div>
+                <div class="listing"><img src="images/adaeth/ada_headshot.png" alt="a grey wolf with white eyes"
+                        title="the blue moon washes over us AND THE CRUMBLING WORLD"></div>
+            </section>
+
+            <div id="carousel-one">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_oref.png"
+                            alt="a grey wolf with white eyes and various dark grey markings"
+                            title="somehow, this is still mostly accurate">
+                        <div class="image-caption">The original reference sheet from January 1, 2018.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_color.png"
+                            alt="a red-grey wolf with pale blue eyes, labeled as a pumpkin"
+                            title="drawing in a voice chat, part one">
+                        <div class="image-caption">The first time she had her red coloring.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_progression.png"
+                            alt="four drawings of a wolf. as the list goes down, she gets thinner, her tail shorter, and her head held lower."
+                            title="tag yourself i'm A">
+                        <div class="image-caption">A progression chart of her general shape over the course of the
+                            story.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_progressiont.png"
+                            alt="three drawings of a wolf, whose markings get less intricate with each iteration"
+                            title="LOOK AT THOSE THIN LEGS">
+                        <div class="image-caption">A progression chart with her markings.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_refe.png" alt="a grey wolf with white eyes"
+                            title="why are the markings not going to her eyes...">
+                        <div class="image-caption">A quick reference of her later on that has numerous things wrong.
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_perspective.png"
+                            alt="a winged wolf, snarling at something offscreen. her left paw and wing are close to the camera"
+                            title="my art teachers never taught character perspective, only those stupid square buildings">
+                        <div class="image-caption">A more recent sketch of her with her wings.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_trapped.png"
+                            alt="a grey wolf standing defiantly against bright white spirits rushing towards her. a tiny grey cat cowers behind her front leg."
+                            title="You Cannot Leave">
+                        <div class="image-caption">An older concept, her regaining some of her power as she tries to
+                            escape.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_full.png"
+                            alt="a red-orange wolf with bright blue eyes snarling at something offscreen"
+                            title="Allies or Enemies">
+                        <div class="image-caption">Sloppy sketch figuring out her "full" design.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_tinythyme.png" alt="a large winged wolf standing next to a tiny cat"
+                            title="HAHAHA HOW ARE YOU THAT SMALL">
+                        <div class="image-caption">A possible size comparison of her original self next to Thyme.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_gjinka.png"
+                            alt="a loose sketch of a tall woman with long hair and flowing robes"
+                            title="this was supposed to be a combo of fire nation robes (AtLA) and claudia/aaravos (TDP)">
+                        <div class="image-caption">An unfinished gjinka. (Redesign as human)</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_ending.png"
+                            alt="a canine touching a mario power star after saying you've done me wrong too many times"
+                            title="drawing in a voice chat, part two">
+                        <div class="image-caption">The secret ending to WtV.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/ada_thejacket.png" alt="an anthro wolf with a blue-green hoodie"
+                            title="everybody wants to steal her jacket. even me.">
+                        <div class="image-caption">Anthro Ada with The Jacket, because people would fight me if I didn't
+                            include this</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Other Characters</button>
+        <div class="panel">
+            <p>As much as I would love to get into specifics, I am very tired. So please accept these captioned
+                slideshows of old art instead.</p>
+
+            <div id="carousel-two">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/characters/other/drake_only.png"
+                            alt="a solid red canine with grey armor and a scratched grey eye"
+                            title="i literally don't remember his original eye color">
+                        <div class="image-caption">The only colored drawing of Draoul's original design.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/mi10_cringe.png"
+                            alt="a faceless black canine with a disjointed neck, tail, and wings"
+                            title="nap i see you laughing in the corner">
+                        <div class="image-caption">Mi-10's original design... A dog that can shift into Pokemon. Yeah.
+                        </div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/mi10_disconnect.png"
+                            alt="a faceless black canine with disjointed limbs, blue wires connecting them"
+                            title="honestly this was cool i should bring it back">
+                        <div class="image-caption">Mi-10 with the same disjointed segments motif.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/zach_original.png"
+                            alt="a brown and gold wolf with green eyes and a silver, white-tipped tail"
+                            title="uncreative names for the deceased family!">
+                        <div class="image-caption">Zach's original ref, featuring an acid art background because
+                            Colors!3D.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/spark_oldref.png"
+                            alt="a light tan canine with a grey tail, covered in dark patches"
+                            title="WHY DOES HE HAVE TWO TOES.">
+                        <div class="image-caption">Peak 2016 design.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/spark_newref.png"
+                            alt="a light tan canine with a greyish brown tail"
+                            title="how do these dogs have the access and dexterity to do those markings">
+                        <div class="image-caption">Peak 2019 design with outdated notes.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/liz/liz_full.png"
+                            alt="a solid grey wolf with a deep gash in her chest and golden flowers covering her eyes"
+                            title="2017 me needed a therapist">
+                        <div class="image-caption">Liz's original design, in which she was a symbol of hope despite her
+                            being a gory mess.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/thyme/thyme_original.png"
+                            alt="a speckled grey cat with blue eyes and a sort of raccoon mask"
+                            title="my man was years old and still an apprentice. also my first gay character lol?">
+                        <div class="image-caption">Thyme's first ref. Warrior cats.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/thyme/thyme_recent.png"
+                            alt="a speckled grey cat with blue eyes and a dark mask of fur like a raccoon"
+                            title="the amount of inside jokes on this is fantastic">
+                        <div class="image-caption">More recent ref of Thyme.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/guardians/velz/rohn_original.png"
+                            alt="a tan dragon with a long body, two tails, skeletal wings, and a medallion"
+                            title="he rlly looked like that">
+                        <div class="image-caption">Rohn's original ref. yeah.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/guardians/delta/del_beta.png"
+                            alt="a brown dog with a cream tail and a necklace with a star pendant, crying out for someone named rune"
+                            title="i just want to see the colorslive people freak out by having this here">
+                        <div class="image-caption">Delta in their original storyline, which I can barely remember at
+                            this point.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/guardians/velt_first.png"
+                            alt="a tan creature with four tiny orange-tipped wings, and a swirling blue pendant tied to the end of their tail"
+                            title="the teal. why is it there. why.">
+                        <div class="image-caption">Veltrynn's original design, nobody knows how we got here.</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="accordion">Extra</button>
+        <div class="panel">
+            <p>Some other images that I wanted to include in some way.</p>
+
+            <div id="carousel-three">
+                <div class="image-container">
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_run2.JPG" alt="a small comic. a wolf wakes up a small cat, spotting a fire in the distance, explaining that they need to run." title="ada took in this child and still calls him kid">
+                        <div class="image-caption">(1/2) An old comic page for the start of The Burning.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_run1.JPG" alt="a small comic. a wolf and a cat are running away and pass through a barrier. behind them are crow-shaped mountains looking up at the silhouette of a dragon." title="i named these files wrong, this is named 1 when it is 2">
+                        <div class="image-caption">(2/2) Featuring a very on-the-nose design for the Dawn and Dusk peaks.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/guardians/guard_talk.jpg" alt="a sketch page of various creatures with similar markings on their face" title="haha rohn gets skewed for his crimes">
+                        <div class="image-caption">A small page going over Guardians and Velz.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_zix.png" alt="a mountainside overlooking the setting sun in the ocean. tucked in the corner is a pile of books with a small dragon laying on top" title="zix is just a glorified bookmark /j">
+                        <div class="image-caption">Part of an old concept where a drifter with a tiny dragon stays with Ada and writes about the realm.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/guardians/velz/velz_journal.png" alt="a faded journal entry describing a dragon. it is drawn next to it, with a stick figure for scale" title="get a load of that writing">
+                        <div class="image-caption">Said author's first page on Velz.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_fi.png" alt="a shot of someone's torso, holding their hands to their chest. blood slips between their fingers and floats upwards. they are crying" title="We're All Connected">
+                        <div class="image-caption">Part of a concept where Ada's magic leaked out into the real world.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/characters/other/danny_boy.png" alt="a man in a grey sweatshirt and ripped jeans. a brown canine with orange eyes winds around him, snarling. its legs are bandaged." title="collector of tiny spoons">
+                        <div class="image-caption">One of those people from said concept.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/etc/wtv_site_logo.jpg" alt="a collection of logos following the motif of a wolf and the letter V" title="i actually wanted to include the words 'welcome to' but adobe illustrator hates me">
+                        <div class="image-caption">Very meta of me to include this site's own logo work.</div>
+                    </div>
+                    <div class="image-slide">
+                        <img src="images/adaeth/orb_ada.png" alt="a wolf that has been reduced to nothing but a rounded shape. she is unhappy about it." title="orb">
+                        <div class="image-caption">Orb.</div>
+                    </div>
+    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+    
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>See the Characters page for design credits.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function topNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function animateFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <!--- accordion script --->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <!--- 1st carousel --->
+    <script>
+        with (id = "carousel-one") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-one")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+    <!--- second carousel --->
+    <script>
+        with (id = "carousel-two") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-two")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+    <!--- third carousel --->
+    <script>
+        with (id = "carousel-three") {
+            var currentSlide = 0;
+            const container = document.querySelector("#carousel-three")
+            const slides = container.querySelectorAll(".image-slide")
+            const dots = container.querySelectorAll('.dot')
+
+            const init = (n) => {
+                slides.forEach((slide) => {
+                    slide.style.display = "none"
+                    dots.forEach((dot) => {
+                        dot.classList.remove("activeDot")
+                    })
+                })
+                slides[n].style.display = "block"
+                dots[n].classList.add("activeDot")
+            }
+            container.addEventListener("DOMContentLoaded", init(currentSlide))
+
+
+            const next = () => {
+                currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+                init(currentSlide)
+            }
+
+            const prev = () => {
+                currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+                init(currentSlide)
+            }
+
+            container.querySelector(".next").addEventListener('click', next)
+            container.querySelector(".prev").addEventListener('click', prev)
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    init(index)
+                    currentSlide = i
+                })
+            })
+        }
+    </script>
+
+</body>
+
+</html>

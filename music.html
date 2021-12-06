@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WtV - Music</title>
+    <meta name="author" content="Casey Verbsky">
+    <meta name="description" content="Music for WtV, along with inspirations.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Merienda:wght@400;700&family=Quattrocento:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: url(images/background4.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        @media screen and (max-width:600px) {
+            body {
+                background: #345120;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="top-logo" style="float:left"><img src="images/name_icon.svg"
+                alt="a logo reading vriodel"></a>
+        <a href="index.html"><img src="images/home_icon.svg" alt="a home icon" class="top-icon" width="56px">
+            <div class="navText">Home</div>
+        </a>
+        <a href="characters.html"><img src="images/character_icon.svg" alt="a wolf icon" class="top-icon" width="64px">
+            <div class="navText">Characters</div>
+        </a>
+        <a href="world.html"><img src="images/world_icon.svg" alt="a compass icon" class="top-icon" width="55px">
+            <div class="navText">World</div>
+        </a>
+        <a href="music.html"><img src="images/music_icon.svg" alt="a music note icon" class="top-icon" width="45px">
+            <div class="navText">Music</div>
+        </a>
+        <a href="development.html"><img src="images/dev_icon.svg" alt="a pencil icon" class="top-icon" width="47px">
+            <div class="navText">Development</div>
+        </a>
+        <div class="menuIcon" onclick="animateFunction(this)">
+            <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </div>
+        </a>
+    </nav>
+
+    <main class="container">
+        <h1>Music</h1>
+        <p>There are two established themes - the main and the waltz. However, what exists is mostly improv, and 99% A
+            minor. The simplistic and repetitive motifs stem from 1. Me being stressed 2. Not having much time home
+            alone (the only time I could comfortably play) and 3. Not absorbing much knowledge from piano lessons.
+            <br>The first two recordings were (stupidly) done by putting my phone on the piano and taking a video.
+            Honestly, the audio quality of all the clips are kinda bad. Not to mention that these all walk a fine line
+            between "painful" and "enjoyable" due to fumbling around with no guidance.
+        </p>
+
+        <section class="content-list">
+            <div class="listing">
+                <p><em><strong>Harmonia</strong></em> was recorded in September 2016 and features the main theme. My dog
+                    Murphy can be
+                    heard barking at the end.</p>
+                <audio controls>
+                    <source src="audio/2016one.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="listing">
+                <p><em><strong>Safe Return</strong></em> was recorded a year later in August 2017 and remains the
+                    longest recording.
+                    Thanks to the way I recorded, my singing is barely audible. I cannot remember the words.</p>
+                <audio controls>
+                    <source src="audio/2017two.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+        <section class="content-list">
+            <div class="listing">
+                <p><em><strong>Thoughts in D Minor</strong></em> was recorded October 2019 along with <em>Mix of the
+                        Mind.</em> They were not done with WtV in mind, but still fit the overall tone.</p>
+                <audio controls>
+                    <source src="audio/2019_thoughts.m4a" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="listing">
+                <p><em><strong>Mix of the Mind</strong></em> is a constant back-and-forth, meant to represent the
+                    difficulty of keeping balance with mental health.</p>
+                <audio controls>
+                    <source src="audio/2019_mix.m4a" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+        <section class="content-list">
+            <div class="listing">
+                <p><em><strong>The Choir</strong></em> was made with GarageBand in June 2019 for Ohio Northern
+                    University's summer music camp. I think I was the only one to not remix an already existing song.
+                    Unfortunately, the GarageBand file wasn't saved, so this clip remains a bit.. awkwardly timed.</p>
+                <audio controls>
+                    <source src="audio/2019_camp.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="listing">
+                <p><em><strong>Do You Know</strong></em> was recorded February 2019 on flute and features me complaining
+                    about how I speed up too much. Please forgive the tonal quality, my lips are always chapped beyond
+                    repair and my lungs hate me.</p>
+                <audio controls>
+                    <source src="audio/2019_fluteimprov.m4a" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+
+        <button class="accordion">More Piano Improv</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <p><em>Waltz & Main, December 2018.</em> Arguably the most refined version of, well, any of these.
+                        Why did I even put it separately? I don't know.</p>
+                    <audio controls>
+                        <source src="audio/2018_waltzmain.m4a" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="listing">
+                    <p><em>New Waltz Betas, September 2021.</em> Poor audio quality and some clunks because dorm room +
+                        keyboard. I also forgot how to play a waltz.</p>
+                    <audio controls>
+                        <source src="audio/2021_newwaltz1.m4a" type="audio/mpeg">
+                    </audio>
+                    <audio controls>
+                        <source src="audio/2021_newwaltz2.m4a" type="audio/mpeg">
+                    </audio>
+                </div>
+            </section>
+
+            <section class="content-list">
+                <div class="listing">
+                    <p><em>Adaeth Speaks, December 2020.</em></p>
+                    <audio controls>
+                        <source src="audio/2020_ada.m4a" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="listing">
+                    <p><em>Adaeth and Her Shadow, October 2021.</em></p>
+                    <audio controls>
+                        <source src="audio/2021_adaadecho.m4a" type="audio/mpeg">
+                    </audio>
+                </div>
+            </section>
+        </div>
+
+        <button class="accordion">Cello Improv (not as fun as it sounds)</button>
+        <div class="panel">
+            <section class="content-list">
+                <div class="listing">
+                    <p><em>Guardian Improv, November 2020.</em></p>
+                    <audio controls>
+                        <source src="audio/2020_cello_guard.m4a" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="listing">
+                    <p><em>Conversation, December 2020.</em></p>
+                    <audio controls>
+                        <source src="audio/2020_cello_guard2.m4a" type="audio/mpeg">
+                    </audio>
+                </div>
+            </section>
+            <p><em>Arpeggios, December 2020.</em></p>
+            <audio controls>
+                <source src="audio/2020_cello_arpeggio.m4a" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <h2>The Inspiration Playlist</h2>
+        <p>Songs that have inspired motifs, storylines, or just generally fit the vibe.</p>
+        <iframe src="https://open.spotify.com/embed/playlist/6TYeq8PSqHZnjIMZnFd7fN?utm_source=generator" width="100%"
+            height="380" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+    </main>
+
+    <script>
+        function topNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function animateFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <!--- accordion script --->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

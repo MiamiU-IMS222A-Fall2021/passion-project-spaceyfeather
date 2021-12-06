@@ -1,1 +1,387 @@
+.container {
+    background-color: #EEEBDD;
+    max-width: 960px;
+    padding: 15px;
+    margin: 1em auto;
+    border-radius: 10px 20px;
+    box-shadow: 0px 20px 20px #052306;
+    color: #4B2F27;
+}
 
+p {
+  font-family: 'Baskervville', serif;
+}
+
+.center-italic {
+  text-align: center;
+  font-style: italic;
+}
+
+footer {
+  font-style: italic;
+}
+
+a {
+  color: #6A2F11;
+}
+
+h1, h2, h3 {
+  font-family: 'Merienda', cursive;
+}
+
+hr {
+  background-color: #6A2F11;
+  opacity: 0.5;
+}
+
+.content-list {
+    display: flex;
+}
+
+.listing {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 1em auto;
+    margin: 1em auto;
+    outline: 4px solid #6A2F11;
+}
+
+#taller-image {
+  max-height: 400px;
+  max-width: auto;
+  width: auto;
+}
+/* the ones on the right want to be too far to the left but i am tired */
+
+#ada-sprite {
+  outline: none;
+  display: block;
+  align-self: center;
+}
+
+.top-icon {
+    outline: none;
+    margin-left: 25px;
+}
+
+.top-logo img {
+  outline: none;
+  width: 190px;
+  height: auto;
+  margin: 5px auto;
+}
+
+.profile {
+  text-align: center;
+  outline: 2px dashed #BFA08D;
+  border-radius: 20px 20px;
+  margin-left: 6em;
+  margin-right: 6em;
+  padding: 1em;
+}
+
+.profile img {
+  outline: none;
+  width: 45px;
+  height: auto;
+}
+
+.profile .ditto {
+  width: 200px;
+  height: auto;
+}
+
+.profile h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media screen and (max-width:600px) {
+  .content-list {
+    display: block;
+  }
+
+  .top-logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .profile {
+    margin: 1em auto;
+  }
+
+}
+
+iframe {
+  padding: 1em auto;
+  border-radius: 10px 10px;
+}
+
+/*
+css below is mostly from tutorials, modified to fit this
+*/
+
+audio::-webkit-media-controls-panel {
+  background-color: #D4C5AD;
+}
+
+
+.topnav {
+    background-color: #180C01;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-radius: 20px 20px;
+    box-shadow: 0px 0px 20px #180C01;
+    z-index: 1; /* this keeps it above the slideshow */
+  }
+
+  .topnav a {
+    float: right;
+    display: block;
+    color: #13CFF0;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.2s ease-in-out;
+  }
+  /*
+  the float and block display allows it to be the layout it is
+      which is unfortunately a bit uneven
+  */
+
+  .navText {
+    visibility: hidden;
+    font-family: 'Quattrocento', serif;
+    margin-left: 25px;
+  }
+
+ .top-icon:hover ~ .navText {
+   visibility: visible;
+ }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .topnav.responsive .top-logo {
+      display: none;
+    }
+
+    .topnav.responsive .navText {
+      visibility: visible;
+    }
+
+    .topnav.responsive .top-icon {
+      display: none;
+    }
+
+    .topnav.responsive {
+      position: top;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 20px;
+    }
+  }
+  /* menu's X appears at the bottom for some reason
+      i think this has something to do with the float,
+      but changing that float to be something else is a lot more
+      complicated and tedious
+  */
+
+
+  /* accordion code below */
+  .accordion {
+    background-color: #D4C5AD;
+    color: #4B2F27;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s ease-in-out;
+    border-radius: 20px 20px;
+    padding: 1em auto;
+    margin: 1em auto;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    font-size: 16pt;
+  }
+
+  /* transition closing doesn't work, same with nav */
+  
+  .panel {
+    max-height: 0;
+    padding: 0 18px;
+    background-color: #EEEBDD;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    border-right: 3px solid #D4C5AD;
+    border-left: 3px solid #D4C5AD;
+    border-radius: 10px 10px;
+  }
+
+  .accordion:after {
+    content: '\003D';
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #4B2F27;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\003D";
+  }
+
+  button {
+    font-family: serif;
+  }
+
+
+  /* animated menu */
+  .menuIcon {
+    float: right;
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #13CFF0;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  } /* webkit exists for safari*/
+
+  /* multiple tutorials for an image gallery and all of them have things i do and don't like
+  so time to be risky and try to make my own from these */
+
+  .image-container {
+    position: relative;
+    align-content: center;
+    margin: 25px 1em 1em 1em;
+    padding: 1em auto;
+    display: flex;
+    max-height: 50%;
+    width: auto;
+  }
+
+.image-slide {
+    flex: 1;
+    display: none;
+  }
+
+.image-container img {
+    display: block; /* this lets it be centered */
+    max-height: 400px;
+    width: auto;
+    margin: auto;
+  }
+
+  .image-caption {
+    text-align: center;
+    padding: 1em 0px 0px 0px;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: #630000;
+    font-weight: bold;
+    font-size: 20pt;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .prev {
+    left: 2px;
+  }
+
+  .next {
+    right: 2px;
+  }
+
+  @media screen and (max-width:600px) {
+    .prev, .next {
+      visibility: hidden;
+    }
+  }
+
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    padding: 1em auto;
+  }
+
+  .dot {
+    flex: 1;
+    cursor: pointer;
+    margin: 10px;
+    max-width: 20px;
+    height: 20px;
+    color: #333;
+    border-radius: 50%;
+    background-color: #D4C5AD;
+  }
+
+  .activeDot {
+    border: 2px solid #4B2F27;
+  }
